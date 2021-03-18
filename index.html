@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="eta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta http-equip="x-ua-compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>coursera</title>
+<style>
+.jumbotron{
+background-color:#2a0111;
+}
+</style>
+</head>
+<body class="bg-light">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col col-2">
+<a href="index.html" class="fa fa-instagram fa-2x fw"></a>
+</div>
+<div class="col-2">
+<a href="index.html" class="fa fa-facebook fa-2x fw"></a>
+</div>
+<div class="col-2">
+<a href="index.html" class="fa fa-twitter fa-2x fw"></a>
+</div>
+<div class="col-2">
+<a href="index.html" class="fa fa-youtube fa-2x fw"></a>
+</div>
+</div>
+</div>
+<h1 id=heading></h1>
+    <header class="jumbotron py-4 text-white">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col-12 col-sm">
+                </div>
+            </div>
+        </div>
+    </header>
+<div class="container-fluid my-5">
+<div class="row justify-content-center my-2">
+<div class="col col-md-3 d-none d-sm-block">
+<h2>hello1</h2>
+</div>
+<div class="col col-md-3 d-none d-sm-block offset-1">
+<h2>hello2</h2>
+</div>
+</div>
+<div class="row justify-content-center my-2">
+<div class="col col-md-3 d-none d-sm-block">
+<h2>hello3</h2>
+<a href="https://www.hotstar.com">Hotstar</a>
+</div>
+<div class="col col-md-3 d-none d-sm-block offset-1">
+<h2>hello4</h2>
+</div>
+</div>
+</div>
+<h1>This is ajax tutorial</h1>
+<div class=container</div>
+<div class=row>
+<div class="col col-sm-1 col-md-2">
+<button class="btn btn-primary" id=fetch>Fetch data</button>
+</div>
+<div class="col col-sm-1 col-md-2">
+<button class="btn btn-danger" id=dfetch>Dont fetch</button>
+</div>
+</div>
+<h1 id=heading>Heading</h1>
+<ul id=list>
+
+</ul>
+
+<footer class="footer bg-dark text-light py-4 d-none d-sm-block">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              121, Clear Water Bay Road<br>
+		              Clear Water Bay, Kowloon<br>
+		              HONG KONG<br>
+		              Tel.: +852 1234 5678<br>
+		              Fax: +852 8765 4321<br>
+		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+		           </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a href="http://google.com/+">Google+</a>
+                        <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
+                        <a href="http://www.linkedin.com/in/">LinkedIn</a>
+                        <a href="http://twitter.com/">Twitter</a>
+                        <a href="http://youtube.com/">YouTube</a>
+                        <a href="mailto:">Mail</a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+<input type=text id="inp" placeholder="Enter the name">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+<script>
+let inp=document.getElementById('inp');
+let list=document.getElementById('list');
+$('#fetch').click(function(){
+let xhr=new XMLHttpRequest();
+xhr.open('GET','harry.json',true);
+xhr.onload=function(){
+let obj=JSON.parse(this.responseText);
+let str="";
+let acha=obj.data;
+for(key in acha)
+{
+str+=`<li>${acha[key].id} ${acha[key].email} ${acha[key].first_name} ${acha[key].last_name} ${acha[key].avatar}</li>`;
+}
+list.innerHTML=str;
+}
+xhr.send();
+});
+</script>
+<//html>
