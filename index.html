@@ -126,6 +126,7 @@ background-color:#2a0111;
 let inp=document.getElementById('inp');
 let list=document.getElementById('list');
 $('#fetch').click(function(){
+setTimeout(function(){
 let xhr=new XMLHttpRequest();
 xhr.open('GET','harry.json',true);
 xhr.onload=function(){
@@ -139,6 +140,25 @@ str+=`<li>${acha[key].id} ${acha[key].email} ${acha[key].first_name} ${acha[key]
 list.innerHTML=str;
 }
 xhr.send();
+},300);
+});
+function func1(){
+return new Promise(function(resolve,reject){
+const error=false;
+if(!error)
+{
+alert('Promise has been fulfilled');
+}
+else
+{
+alert('Promise was not fulfilled');
+}
+});
+}
+func1().then(function(){
+alert('Promise was fulfilled');
+}).catch(function(){
+alert('Promise was not fulfilled');
 });
 </script>
 <//html>
