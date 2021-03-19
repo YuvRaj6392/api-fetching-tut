@@ -144,21 +144,23 @@ xhr.send();
 });
 function func1(){
 return new Promise(function(resolve,reject){
-const error=false;
+const error=true;
 if(!error)
 {
 alert('Promise has been fulfilled');
+resolve();
 }
 else
 {
 alert('Promise was not fulfilled');
+reject();
 }
 });
 }
 func1().then(function(){
-alert('Promise was fulfilled');
+alert('Thank you bhai Promise was fulfilled');
 }).catch(function(){
-alert('Promise was not fulfilled');
+alert(' Kya yaar bhai Promise was not fulfilled');
 });
 </script>
 <//html>
